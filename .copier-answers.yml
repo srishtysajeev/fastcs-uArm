@@ -1,0 +1,17 @@
+# Changes here will be overwritten by Copier
+_commit: 4.1.0
+_src_path: https://github.com/DiamondLightSource/python-copier-template.git
+author_email: srishty.sajeev@diamond.ac.uk
+author_name: Srishty Sajeev
+description: Control system agnostic framework for building IOCs in Python that will
+    work with EPICS
+distribution_name: fastcs-uArm
+docker: true
+docker_debug: false
+docs_type: README
+git_platform: github.com
+github_org: srishtysajeev
+package_name: fastcs_uArm
+pypi: false
+repo_name: fastcs-uArm
+type_checker: mypy
