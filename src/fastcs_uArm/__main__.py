@@ -2,16 +2,19 @@
 
 from argparse import ArgumentParser
 from collections.abc import Sequence
-from fastcs_uArm.RobotIOC import RobotController
-from fastcs.transport.epics.ca.options import EpicsCAOptions, EpicsGUIOptions
-from fastcs.transport.epics.options import EpicsIOCOptions
 from pathlib import Path
+
 from fastcs import FastCS
-from fastcs.transport.epics.options import (
+from fastcs.transport.epics.ca.options import (
+    EpicsCAOptions,
     EpicsGUIOptions,
     EpicsIOCOptions,
 )
 
+# from fastcs.transport.epics.options import EpicsIOCOptions
+from fastcs_uArm.RobotIOC import RobotController
+
+# from fastcs.transport.epics.options import (EpicsGUIOptions,EpicsIOCOptions)
 from . import __version__
 
 __all__ = ["main"]
@@ -29,7 +32,7 @@ def main(args: Sequence[str] | None = None) -> None:
     parser.parse_args(args)
 
     gui_options = EpicsGUIOptions(
-    output_path=Path(".") / "robot.bob", title="My Robot Controller"
+        output_path=Path(".") / "robot.bob", title="My Robot Controller"
     )
     epics_options = EpicsCAOptions(
         gui=gui_options,
@@ -44,5 +47,4 @@ def main(args: Sequence[str] | None = None) -> None:
 
 
 if __name__ == "__main__":
-
     main()
