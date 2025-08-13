@@ -1,0 +1,1000 @@
+   50          Preparing metadata (pyproject.toml): finished with status 'done'
+   51          Downloading pvxslibs-1.4.0a1.tar.gz (664 kB)
+   52             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.6/664.6 kB 7.0 MB/s eta 0:00:00
+   53          Installing build dependencies: started
+   54          Installing build dependencies: finished with status 'done'
+   55          Getting requirements to build wheel: started
+   56          Getting requirements to build wheel: finished with status 'done'
+   57          Preparing metadata (pyproject.toml): started
+   58          Preparing metadata (pyproject.toml): finished with status 'done'
+   59          WARNING: Requested pvxslibs>=1.3.1 from https://files.pythonhosted.org/packages/2f/18/9811e08588a9c39455ff1b1469d6127dec361ed407843c3c96f613e63d85/pvxslibs-1.4.0a1.tar.gz, but installing version 1.4.0a1
+   60        Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+   61        Using cached setuptools_dso-2.12.2-py2.py3-none-any.whl (23 kB)
+   62        Using cached wheel-0.45.1-py3-none-any.whl (72 kB)
+   63        Using cached numpy-2.3.1-cp313-cp313-manylinux_2_28_x86_64.whl (16.6 MB)
+   64        Downloading cython-3.1.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+   65           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 8.1 MB/s eta 0:00:00
+   66        Using cached epicscorelibs-7.0.7.99.1.2a1-cp313-cp313-manylinux2014_x86_64.whl (5.4 MB)
+   67        Building wheels for collected packages: pvxslibs
+   68          Building wheel for pvxslibs (pyproject.toml): started
+   69          Building wheel for pvxslibs (pyproject.toml): finished with status 'error'
+   70          error: subprocess-exited-with-error
+   71        
+   72          × Building wheel for pvxslibs (pyproject.toml) did not run successfully.
+   73          │ exit code: 1
+   74          ╰─> [559 lines of output]
+   75              /tmp/pip-build-env-jg_0bl6u/overlay/lib64/python3.13/site-packages/epicscorelibs/version.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+   76                from pkg_resources import get_distribution, parse_version
+   77              /tmp/pip-build-env-jg_0bl6u/overlay/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+   78                          /tmp/pip-build-env-jg_0bl6u/overlay/lib/python3.13/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+   79        
+   80                      ********************************************************************************
+   81                      Please consider removing the following classifiers in favor of a SPDX license expression:
+   82        
+   83                      License :: OSI Approved :: BSD License
+   84        
+   85                      See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+   86                      ********************************************************************************
+   87        
+   88                    
+   89                self._finalize_license_expression()             running bdist_wheel
+   90              running build
+   91              running build_py
+   92              creating build/lib.linux-x86_64-cpython-313/pvxslibs
+   93              copying python/pvxslibs/version.py -> build/lib.linux-x86_64-cpython-313/pvxslibs
+   94              copying python/pvxslibs/path.py -> build/lib.linux-x86_64-cpython-313/pvxslibs
+   95              copying python/pvxslibs/ioc.py -> build/lib.linux-x86_64-cpython-313/pvxslibs
+   96              copying python/pvxslibs/__init__.py -> build/lib.linux-x86_64-cpython-313/pvxslibs
+   97              creating build/lib.linux-x86_64-cpython-313/pvxslibs/lib
+   98              copying python/pvxslibs/lib/__init__.py -> build/lib.linux-x86_64-cpython-313/pvxslibs/lib
+   99              creating build/lib.linux-x86_64-cpython-313/pvxslibs/test
+  100              copying python/pvxslibs/test/test_load.py -> build/lib.linux-x86_64-cpython-313/pvxslibs/test
+  101              copying python/pvxslibs/test/__init__.py -> build/lib.linux-x86_64-cpython-313/pvxslibs/test
+  102              running build_dso
+  103              running build_expand
+  104              In Expand
+  105              creating build/temp.linux-x86_64-cpython-313/event2
+  106              creating build/lib.linux-x86_64-cpython-313/pvxslibs/include/pvxs
+  107              creating build/lib.linux-x86_64-cpython-313/pvxslibs/dbd
+  108              Patch _fix_compile_args() to avoid modification to compiler.include_dirs
+  109              _patch_fix_compile_args include_dirs=None
+  110              creating /tmp/tmpi21kdk4t/tmp/tmpi21kdk4t
+  111              gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -O3 -fPIC -c /tmp/tmpi21kdk4t/try_compile.c -o /tmp/tmpi21kdk4t/tmp/tmpi21kdk4t/try_compile.ofda
+  112  cd /usr/bin/gcc
+  113  cd /usr/bin
+  114  ls
+  115  ls |grep gcc
+  116  sudo dnf install python3.12
+  117  python3.12 --version
+  118  ls | grep python
+  119  echo $VIRTUAL_ENV
+  120  cd FastCS/
+  121  ls
+  122  man nano
+  123  nano -v phoebus.sh 
+  124  nano phoebus.sh 
+  125  podman run -it --net host ghcr.io/epics-containers/epics-base-developer:7.0.8ad3
+  126  ls 
+  127  code . 
+  128  tmux
+  129  tmux ls
+  130  tmux new -s Session2
+  131  tmux ls
+  132  tmux attach -t Session2
+  133   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 36319 -- /home/zsw36318/Work/FastCS/mydemo_methods.py 
+  134  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  135  set -g mouse on
+  136  $c
+  137  sudo openfortivpn byod.diamond.ac.uk -u Srishty.sajeev@diamond.ac.uk
+  138  c=1
+  139  while true; do echo "Hello $c"; let c=c+1; sleep 1; done
+  140  tmux ls
+  141  tmux attatch
+  142  tmux attatch -t 0
+  143  tmux attach -t 0
+  144  echo $c
+  145  set
+  146  printenv
+  147  clear
+  148  c=1
+  149  while true; do echo "Hello $c"; let c=c+1; sleep 1;done 
+  150  $c
+  151  cd .. 
+  152  ls 
+  153  cd Random/
+  154  ls 
+  155  mkdir BashScripting
+  156  ls BashScripting/
+  157  if mkdir a; then echo'ok'; else echo ;error; fi
+  158  if mkdir a; then echo 'ok'; else echo ;error; fi
+  159  if mkdir a; then echo 'ok'; else echo "error okok"; fi
+  160  rm -d a
+  161  if mkdir a; then echo 'ok'; else echo "error okok"; fi
+  162  ls
+  163  rm -d a 
+  164  cd BashScripting/
+  165  nano bashscript.sh
+  166  which bash
+  167  ls -s bashscript.sh 
+  168  ls -l bashscript.sh 
+  169  chmod +x bashscript.sh 
+  170  ls -l 
+  171  chmod 711
+  172  chmod 711 bashscript.sh 
+  173  ls -l 
+  174  chmod 744 bashscript.sh 
+  175  ls -l 
+  176  ./bashscript.sh 
+  177  mv bashscript.sh diamondVPN.sh
+  178  ls 
+  179  ls -l
+  180  cat /sys/devices/virtual/dmi/id/product_name
+  181  sudo dmidecode -s system-product-name
+  182  dmidecode -s system-product-name
+  183  sudo dmidecode -s system-product-name
+  184  sudo dmidecode -t system
+  185  cd /sys/
+  186  ls 
+  187  cd devices
+  188  ls
+  189  /home/zsw36318/.pyenv/versions/3.11.13/bin/python /home/zsw36318/Learning/loadingwithr.py
+  190  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  191  tmux ls
+  192  ls cpu
+  193  lscpu
+  194  df -h
+  195  clear
+  196  ls 
+  197  ls ~
+  198  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  199   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54187 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  200   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 41319 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  201   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33535 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  202   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 34375 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  203   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 50379 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  204   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33243 -- /home/zsw36318/Work/FastCS/mydemo.py 
+  205   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 36271 -- /home/zsw36318/Work/FastCS/mydemo.py 
+  206   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 40345 -- /home/zsw36318/Work/FastCS/mydemo.py 
+  207   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 53201 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  208   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 44289 -- /home/zsw36318/Work/FastCS/dynamic_demo.py 
+  209   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 57977 -- -m tickit --log-level INFO all /home/zsw36318/Work/FastCS/src/fastcs/demo/simulation/temp_controller.yaml 
+  210  #ji
+  211  [200~lsblk
+  212  lsblk
+  213  uname
+  214  whoami
+  215  lsusb
+  216  lsblk
+  217  clear
+  218  ls
+  219  ./phoebus.sh
+  220  clear
+  221  cd ../
+  222  ls
+  223  cd uArm-Python-SDK/
+  224  ls
+  225  python --version
+  226  python3.12 --version
+  227  python3 --version
+  228  python3.11 --version
+  229  python3.11 -m venv venv 
+  230  python3.12 -m venv venv
+  231  lsusb
+  232  dmesg | grep tty
+  233  dmesg
+  234  ls /dev/ttyUSB*
+  235  ls /dev/ttyACM*
+  236  cd /dev/
+  237  ls
+  238  dmesg | grep tty
+  239  sudo dmesg
+  240  sudo dmesg | grep tty
+  241  dmesg -w
+  242  sudo dmesg -w
+  243  lsusb
+  244  ls | grep ttyACM0
+  245  ls | grep tty*
+  246  /home/zsw36318/.pyenv/versions/3.11.13/bin/python /home/zsw36318/Learning/asyncio.py
+  247  /home/zsw36318/.pyenv/versions/3.11.13/bin/python /home/zsw36318/Learning/asyncio_test.py
+  248  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  249  /home/zsw36318/.pyenv/versions/3.11.13/bin/python /home/zsw36318/Work/uArm-Python-SDK/uarm/__init__.py
+  250  /home/zsw36318/.pyenv/versions/3.11.13/bin/python /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py
+  251  source venv//bin/activate
+  252  pip list
+  253  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py
+  254  pip list
+  255  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py
+  256  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync.py
+  257  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py
+  258  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_test2.py
+  259  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py
+  260  deactivate
+  261  source venv//bin/activate
+  262  pip list
+  263  pip install pyserial
+  264  /usr/bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  265  code . 
+  266  terminator
+  267  tmux
+  268  tmux ls
+  269  tmux list-windows
+  270  clear
+  271  ls 
+  272  git status
+  273  cd .. 
+  274  ls 
+  275  git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
+  276  ls
+  277  which python
+  278  echo hello
+  279  fish
+  280  PVI
+  281  podman run -it --net host ghcr.io/epics-containers/epics-base-developer:7.0.8ad3
+  282  cd ../uArm-Python-SDK/
+  283  ls
+  284  sudo ls | grep tty*
+  285  sudo ls \dev | grep tty*
+  286  sudo ls /dev | grep tty*
+  287  ls/def | grep ttyACM0
+  288  ls /dev | grep ttyACM0
+  289  sudo chmod a+rw /dev/ttyACM0
+  290  ls -l /dev/ttyACM0
+  291  sudo chmod a+rw /dev/ttyACM0
+  292  $USER
+  293  ls -l /dev/ttyACM0
+  294  sudo usermod -a -G dialout $USER
+  295  sudo dmesg | grep tty
+  296  sudo chmod a+rw /dev/ttyACM0
+  297  ls -l /dev/ttyACM0
+  298  sudo chmod a+rw /dev/ttyACM0
+  299  ls -l /dev/ttyACM0
+  300  sudo chmod a+rw /dev/ttyACM0
+  301  ls -l /dev/ttyACM0
+  302  sudo chmod a+rw /dev/ttyACM0
+  303  ls -l /dev/ttyACM0
+  304  sudo dmesg -w
+  305  ls -l /dev/ttyACM*
+  306  ls -l /dev/tty*
+  307  pip3 --version
+  308  sudo usermod -a -G dialout $USER
+  309  echo $USER
+  310  tmux 
+  311  /home/zsw36318/.pyenv/versions/3.11.13/bin/python /home/zsw36318/Learning/kwargs_args.py
+  312  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  313   /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 45621 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_set.py 
+  314  tmux
+  315   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51701 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  316   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33641 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  317   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 60501 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  318   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55691 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  319   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 59449 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  320   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 40033 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  321   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33055 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  322   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 56957 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  323   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 44365 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  324   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 38529 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  325   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55105 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  326   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 56047 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  327   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 43165 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  328   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 42119 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  329   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 50007 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  330  /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py
+  331   /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51917 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  332   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 44667 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  333   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33757 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  334   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 60647 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  335   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 39433 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  336   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55329 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  337   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 39155 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  338   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 60067 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  339   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 48513 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  340   /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 52061 -- -m tickit --log-level INFO all /home/zsw36318/Work/FastCS/src/fastcs/demo/simulation/temp_controller.yaml 
+  341   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33387 -- -m tickit --log-level INFO all /home/zsw36318/Work/FastCS/src/fastcs/demo/simulation/temp_controller.yaml 
+  342   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49977 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  343  ./phoebus.sh
+  344   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 50327 -- -m tickit --log-level INFO all /home/zsw36318/Work/FastCS/src/fastcs/demo/simulation/temp_controller.yaml 
+  345   cd /home/zsw36318/Work/FastCS ; /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 47409 -- -m tickit --log-level INFO all /home/zsw36318/Work/FastCS/src/fastcs/demo/simulation/temp_controller.yaml 
+  346   /usr/bin/env /home/zsw36318/Work/FastCS/.venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55453 -- /home/zsw36318/Work/FastCS/mydemo2.py 
+  347  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  348  pip status
+  349  pip list
+  350  pip list
+  351   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 47889 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  352   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 48133 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  353   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 33973 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  354   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 35977 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  355   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55507 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  356   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 45329 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  357   cd /home/zsw36318/Work/FastCS_uArm ; /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 60091 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC1.py 
+  358  /usr/bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  359  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  360   /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51451 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  361   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51193 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  362   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 57285 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  363   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 41179 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  364   /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 42093 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  365   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 43429 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_report_callback.py 
+  366   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49829 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_set.py 
+  367   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 46741 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  368   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 58485 -- /home/zsw36318/Work/uArm-Python-SDK/examples/scene/screen_test_ipad/performance_drag_drop.py 
+  369   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 37407 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  370   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 41773 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  371   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49689 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  372   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 56917 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  373   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 44243 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  374   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 49029 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  375   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55685 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  376   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 56727 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  377   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 34067 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  378   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 35277 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  379   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 53853 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  380   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 57521 -- /home/zsw36318/Work/uArm-Python-SDK/MyFirstTry.py 
+  381   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 58247 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  382   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 39187 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  383   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 50341 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  384   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 55641 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  385   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 42483 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  386   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 34805 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  387   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 39757 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  388   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 45669 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  389   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 37179 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  390   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 54581 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  391   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 48189 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  392   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 36561 -- /home/zsw36318/Work/uArm-Python-SDK/MySecondTry.py 
+  393  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py
+  394  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/RGB_led_demo.py
+  395  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_3d_mode.py
+  396  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_attach_detach.py
+  397  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_cmd.py
+  398  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_connect.py
+  399  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_coor.py
+  400  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_get.py
+  401  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_grove.py
+  402  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_move.py
+  403  /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_report_callback.py
+  404  /bin/python /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/zsw36318/.vscode/extensions/ms-python.python-2025.10.0-linux-x64/python_files/deactivate/bash/envVars.txt
+  405  tmux
+  406  source /home/zsw36318/Work/uArm-Python-SDK/venv/bin/activate
+  407   /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 43207 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_move.py 
+  408  source /home/zsw36318/Work/uArm-Python-SDK/venv/bin/activate
+  409   /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 40261 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/RGB_led_demo.py 
+  410   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 38545 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_connect.py 
+  411   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 48707 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_coor.py 
+  412   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 60939 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_get.py 
+  413   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 38969 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_set.py 
+  414   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 44913 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/single/test_move.py 
+  415  df - 
+  416  df
+  417  man df
+  418  code
+  419  ls dev | grep ttyACM
+  420  ls /dev | grep ttyACM
+  421  ls/dev
+  422  ls /dev
+  423  dmesg -w
+  424  man dmesg
+  425  sudo dmesg -2
+  426  sudo dmesg -w
+  427  cd ~
+  428  ls
+  429  cd Downloads/
+  430  ls
+  431  ls | grep tgz
+  432  sha256sum ./40003060_D.tgz
+  433  sha256sum ./40003060_D.tgz | grep ED94C3B96EEEF38899AC5DF495692EF50A36F41FF93EB481C7DBD8E541DD912A
+  434  sha256sum ./40003060_D.tgz | grep -i ED94C3B96EEEF38899AC5DF495692EF50A36F41FF93EB481C7DBD8E541DD912A
+  435  tar xvzf ./40003060_D.tgz
+  436  sudo dnf install ./awusbmanager-1.1-1.x86_64.rpm
+  437  modinfo vhci-hcd
+  438  ls ~
+  439  ~/diamondVPN.sh 
+  440  source /home/zsw36318/Work/FastCS/venv3.12/bin/activate
+  441   /usr/bin/env /home/zsw36318/Work/FastCS/venv3.12/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 34383 -- /home/zsw36318/Work/FastCS_uArm/Robot_IOC.py 
+  442  code
+  443  awusbmanager
+  444  podman
+  445  podman pull 
+  446  docker
+  447  ~/diamondVPN.sh 
+  448  source /home/zsw36318/Work/uArm-Python-SDK/venv/bin/activate
+  449   /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 39745 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  450   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 53897 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  451   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 43637 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  452   cd /home/zsw36318/Work/uArm-Python-SDK ; /usr/bin/env /home/zsw36318/Work/uArm-Python-SDK/venv/bin/python /home/zsw36318/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 57249 -- /home/zsw36318/Work/uArm-Python-SDK/examples/api/multi/multi_sync_2.py 
+  453  git status
+  454  git add Robot_IOC1.py Robot_IOC.py 
+  455  git commit -m "Using waveform FastCS datatype"
+  456  git push
+  457  git status
+  458  git add . 
+  459  git reset
+  460  git branch 
+  461  git branch main
+  462  git switch main
+  463  git add . 
+  464  git commit
+  465  git push
+  466  git pull
+  467  git branch bash
+  468  git switch branch bash
+  469  git switch bash
+  470  git branch
+  471  git switch xyz_handler 
+  472  git add . 
+  473  git reset
+  474  git status
+  475  git switch main
+  476  git config pull.rebase false
+  477  cd ~
+  478  ./diamondVPN.sh 
+  479  docker
+  480  podman
+  481  podman search docker.io/busybox
+  482  podman run -it docker.io/library/busybox
+  483  podman build -t hello https://github.com/containers/PodmanHello.git
+  484  podman run -it hello 
+  485  podman system prune
+  486  podman system df
+  487  podman images
+  488  ./diamondVPN.sh 
+  489  which python3
+  490  python3 --version
+  491  python3.11 --version
+  492  python3.11.13 --version
+  493  python3 -m venv $HOME/ec-venv
+  494  source $HOME/ec-venv/bin/activate
+  495  python3 -m pip install --upgrade pip
+  496  pip install copier
+  497  pip install edge-containers-cli
+  498  pip list
+  499  copier copy https://github.com/epics-containers/services-template-compose t01-services
+  500  cd t01-services
+  501  git init -b main 
+  502  git add . 
+  503  git commit -m "initial commit"
+  504  git remote add origin git@github.com:srishtysajeev/t01-services.git
+  505  git push -u origin main 
+  506  git tag 2024.9.1
+  507  git tag 2025.7.29
+  508  git push origin 2025.7.29 
+  509  source ./environment.sh 
+  510  docker compose up -d
+  511  podman compose up -d
+  512  podman compose ps -a
+  513  docker compose stop example-test-01
+  514  podman compose stop example-test-01
+  515  podman compose ps -a
+  516  podman compose start example-test-01
+  517  podman compose ps
+  518  podman compose exec example-test-01 bash
+  519  podman compose logs example-test-01 
+  520  man podman
+  521  podman compose stop
+  522  podman compose down
+  523  podman compose ps -a
+  524  docker compose attach example-test-01
+  525  podman compose attach example-test-01
+  526  docker compose
+  527  git clone https://github.com/epics-containers/example-services
+  528  cd example-services
+  529  # setup some environment variables
+  530  source ./environment.sh
+  531  # launch the example beamline and detach the logs
+  532  docker compose up -d
+  533  podman run -it --net host ghcr.io/epics-containers/epics-base-developer:7.0.8ad3
+  534  kubectl
+  535  ls
+  536  cd Work/
+  537  ls
+  538  mkdir Epics-Container
+  539  cd Epics-Container/
+  540  sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+  541  sudo dnf install podman docker-compose-plugin
+  542  code
+  543  code .
+  544  systemctl enable --user podman.socket --now
+  545  nano ~/.bashrc
+  546  curl -SL https://github.com/docker/compose/releases/download/v2.39.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+  547  chmod +x /usr/local/bin/docker-compose
+  548  sudo chmod +x /usr/local/bin/docker-compose
+  549  cd /usr/local/bin/docker-compose
+  550  sudo curl -SL https://github.com/docker/compose/releases/download/v2.39.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+  551  sudo chmod +x /usr/local/bin/docker-compose
+  552  docker-compose
+  553  podman-compose
+  554  command-line-completion.sh
+  555  nano command-line-completion.sh
+  556  ls
+  557  ./command-line-completion.sh
+  558  bash command-line-completion.sh 
+  559  mkdir -p ~/.local/share/bash-completion/completions
+  560  podman completion bash > ~/.local/share/bash-completion/completions/podman
+  561  cat hello
+  562  echo hello 
+  563  echo $HOME
+  564  ls ~
+  565  ls -a ~
+  566  fish
+  567  ls
+  568  ls -a
+  569  rm -rf .git
+  570  ls -a
+  571  git init --initial-branch=main 
+  572  ls
+  573  ls -a
+  574  copier copy https://github.com/DiamondLightSource/python-copier-template.git .
+  575  pip install copier
+  576  pip uninstall copier
+  577  source ~/ec-venv/bin/activate
+  578  pip list
+  579  pip install copier
+  580  copier copy https://github.com/DiamondLightSource/python-copier-template.git
+  581  copier copy https://github.com/DiamondLightSource/python-copier-template.git .
+  582  pip install fastcs
+  583  deactivate
+  584  source ../FastCS/venv/bin/activate
+  585  pip install copier
+  586  pip install fastcs
+  587  pip list
+  588  python --version
+  589  deactivate
+  590  cd ..
+  591  ls 
+  592  mkdir Venvs
+  593  ls 
+  594  cd Venv
+  595  cd Venvs/
+  596  python3 --verison
+  597  python3 --version
+  598  python version
+  599  python --version
+  600  git status
+  601  git pull origin main 
+  602  git status
+  603  git branch
+  604  cd .. 
+  605  ls 
+  606  mkdir FastCS_uArm2
+  607  ls 
+  608  cd FastCS_uArm2
+  609  pip list
+  610  source ~/ec-venv//bin/activate
+  611  python3 -m pip install --upgrade pip
+  612  pip install copier
+  613  git init --initial-branch=main .
+  614  deactivate
+  615  ls 
+  616  ls -a
+  617  ls cd .. 
+  618  cd .. 
+  619  cd FastCS_uArm
+  620  ls
+  621  ls -a
+  622  cd venv
+  623  git status
+  624  git branch 
+  625  git switch xyz_handler 
+  626  ls 
+  627  ls -a
+  628  git switch handler_creation 
+  629  ls 
+  630  pyenv shell 3.11.13
+  631  python -m venv .venv
+  632  . ./venv/bin/activate
+  633  pip install  -e '.[dev]'
+  634  ls
+  635  ls -a
+  636  cd .venv/
+  637  ls
+  638  cd ..
+  639  source .venv/bin/activate
+  640  python --version
+  641  pip install  -e '.[dev]'
+  642  cd ../..
+  643  ls 
+  644  cd FastCS_uArm
+  645  code . 
+  646  cd ../FastCS_uArm2
+  647  fish 
+  648  code . 
+  649  clear
+  650  cd .. 
+  651  cd FastCS_uArm
+  652  code . 
+  653  tmux
+  654  ls
+  655  tmux resurrect
+  656  tmux 
+  657  cd ../t01-services/
+  658  docker compose ps
+  659  docker compose ps -a
+  660  ~/diamondVPN.sh 
+  661  export EPICS_CA_ADDR_LIST=127.0.0.1:5094
+  662  caget BL01T-DI-CAM-01:DET:Acquire_RBV
+  663  docker compose exec bl01t-ea-test-01 caget BL01T-DI-CAM-01:DET:Acquire_RBV
+  664  podman compose exec bl01t-ea-test-01 caget BL01T-DI-CAM-01:DET:Acquire_RBV
+  665  podman run -it --net host ghcr.io/epics-containers/epics-base-developer:7.0.8ad3
+  666  podman compose logs bl01t-di-cam-01 -f
+  667  podman compose stop bl01t-di-cam-01
+  668  podman compose start bl01t-di-cam-01
+  669  podman compose attach bl01t-di-cam-01
+  670  alias docker=podman
+  671  docker compose exec bl01t-di-cam-01 bash
+  672  docker compose down bl01t-di-cam-01
+  673  docker compose up bl01t-di-cam-01 -d
+  674  docker compose down
+  675  ls
+  676  ls 
+  677  podman compose ps
+  678  podman compose up -d
+  679  podman compose ps
+  680  docker 
+  681  podman compose ps
+  682  podman compose down 
+  683  cd ~
+  684  nano .bashrc
+  685  docker
+  686  nano .bashrc
+  687  docker compose ps
+  688  podman compose ps
+  689  cd Work/Epics-Container/example-services/
+  690  podman compose ps
+  691  podman compose stop 
+  692  docker compose ps -a
+  693  cd ../t01-services/
+  694  docker compose ps -a
+  695  docker compose stop example-test-01
+  696  docker compose ps -a
+  697  docker compose ps
+  698  docker compose start example-test-01
+  699  docker compose ps -a
+  700  docker compose exec example-test-01 bash
+  701  export EPICS_CA_ADDR_LIST=127.0.0.1:5064
+  702  caget EXAMPLE:SUM
+  703  docker compose exec example-test-01 bash
+  704  ls
+  705  nano compose.yaml 
+  706  cd .. 
+  707  ls 
+  708  nano compose.yaml 
+  709  docker compose ps
+  710  docker compose up 
+  711  ls
+  712  cd services/
+  713  ls
+  714  mv bl01t-ea-cam-01/.ioc_template/* bl01t-ea-cam-01/
+  715  rmdir bl01t-ea-cam-01/.ioc_template/
+  716  cd .. 
+  717  ls 
+  718  cd t01-services/
+  719  code . 
+  720  source .venv/bin/activate
+  721  pip list
+  722  ls
+  723  pip install -e .
+  724  pip list
+  725  git init --initial-branch=main .
+  726  # $_ resolves to /path/to/my-project
+  727  copier copy https://github.com/DiamondLightSource/python-copier-template.git .
+  728  pip install -e '.[dev]'
+  729  pip list
+  730  pip install fastcs
+  731  pip install -e .
+  732  pip install numpy
+  733  pip install uArm
+  734  pip install uarm
+  735  git remote add origin git@github.com:srishtysajeev/fastcs-uArm.git
+  736  git branch -M main
+  737  git push -u origin main
+  738  git remote add origin git@github.com:srishtysajeev/fastcs-uArm.git
+  739  git branch -M main
+  740  git push origin main
+  741  git branch
+  742  git status
+  743  pip install -e '.[dev]'
+  744  fastcs-uArm
+  745  fastcs-uArm -v
+  746  git add . 
+  747  git commit -m "Restructured IOC"
+  748  git push 
+  749  git push --set-upstream origin main
+  750  pre-commit run --all-files
+  751  fastcs-uArm
+  752  git status
+  753  git add . 
+  754  git commit -m "Modifying main"
+  755  git push
+  756  ~/diamondVPN.sh 
+  757  cd ../..
+  758  ls 
+  759  cd FastCS_uArm2
+  760  code . 
+  761  cd .. 
+  762  cd FastCS_uArm
+  763  ls 
+  764  code . 
+  765  tmux
+  766  ~/diamondVPN.sh 
+  767  docker compose exec bl01t-ea-cam-01 bash
+  768  docker compose ps
+  769  cd .. 
+  770  ls
+  771  cd Epics-Container/
+  772  ls 
+  773  cd t01-services/
+  774  code . 
+  775  ls
+  776  docker compose up
+  777  docker compose up -d
+  778  docker compose exec bl01t-ea-cam-01 bash
+  779  ls
+  780  cd services/
+  781  ls
+  782  docker compose up bl01t-ea-cam-01/
+  783  docker compose up bl01t-ea-cam-01
+  784  cd .. 
+  785  ls 
+  786  docker compose up bl01t-ea-cam-01
+  787  docker compose ps
+  788  source ./environment.sh 
+  789  nano environment.sh 
+  790  docker compose up -d
+  791  docker compose restart bl01t-ea-cam-01
+  792  cd .. 
+  793  ls
+  794  cd t01-services/
+  795  ls
+  796  git status
+  797  git add . 
+  798  git commit -m "Create bl01t-ea-cam-01 IOC"
+  799  docker compose exec bl01t-ea-cam-01 bash
+  800  docker compose exec bl01t-ea-cam-01 bash
+  801  docker copose up bl01t-ea-cam-01/
+  802  podman copose up bl01t-ea-cam-01/
+  803  podman compose up bl01t-ea-cam-01/
+  804  git status
+  805  cd .. 
+  806  git status
+  807  ls -a
+  808  git status
+  809  git checkout -b raw-startup
+  810  git branch
+  811  docker cp t01-services-bl01t-ea-cam-01-1:/epics/runtime/st.cmd services/bl01t-ea-cam-01/config
+  812  docker cp t01-services-bl01t-ea-cam-01-1:/epics/runtime/ioc.subst services/bl01t-ea-cam-01/config/ioc.subst
+  813  rm services/bl01t-ea-cam-01/config/ioc.yaml
+  814  git checkout main 
+  815  code .
+  816  git revert HEAD
+  817  ls
+  818  cd services/
+  819  cd bl01t-ea-cam-01/
+  820  ls
+  821  git log --oneline
+  822  git reset --hard bf48eb7
+  823  bit branch
+  824  git branch
+  825  git switch raw-startup 
+  826  git switch main
+  827  git log --oneline
+  828  git branch
+  829  git status
+  830  git revert bf48eb7
+  831  git status
+  832  git log --oneline
+  833  git show 50db937 
+  834  git switch raw-startup 
+  835  git switch main
+  836  git log --oneline
+  837  got branch
+  838  git branch
+  839  git revert bf48eb7 
+  840  git revert bf48eb7cca7cc19157c7d1d0452818965e402b70
+  841  git reset bf48eb7cca7cc19157c7d1d0452818965e402b70
+  842  git status
+  843  git reset --hard bf48eb7cca7cc19157c7d1d0452818965e402b70
+  844  git push
+  845  git status
+  846  git push
+  847  git switch raw-startup 
+  848  git branch
+  849  git switch main
+  850  git log --oneline
+  851  podman compose ps
+  852  docker compose ps
+  853  code . 
+  854  git branch
+  855  docker compose up bl01t-ea-cam-01
+  856  docker compose ps
+  857  docker compose ps -a
+  858  git branch
+  859  docker compose ps -a
+  860  docker compose ps 
+  861  . ./environment.sh
+  862  docker compose down
+  863  cd .. 
+  864  git clone --recursive git@github.com:epics-containers/ioc-adsimdetector.git
+  865  nano ~/.bashrc
+  866  cd ioc-adsimdetector/
+  867  ls
+  868  code .
+  869  ~/diamondVPN.sh 
+  870  podman machine init
+  871  podman machine start
+  872  exec podman "$@"
+  873  pyenv shell 3.11.13
+  874  ./build
+  875  ls
+  876  ls
+  877  cd..
+  878  cd ..
+  879  ls
+  880  cd ioc-adsimdetector/
+  881  ls
+  882  code . 
+  883  ./build
+  884  /usr/share/code/code /home/zsw36318/.vscode/extensions/ms-vscode-remote.remote-containers-0.422.1/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/zsw36318/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --docker-path podman --container-session-data-folder /tmp/devcontainers-dab610a3-68f0-4faf-87bb-dbe0fc8e64851754387760514 --workspace-folder /home/zsw36318/Work/Epics-Container/ioc-adsimdetector --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector --id-label devcontainer.config_file=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --remove-existing-container --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+  885  code . 
+  886  /usr/share/code/code /home/zsw36318/.vscode/extensions/ms-vscode-remote.remote-containers-0.422.1/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/zsw36318/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --docker-path podman --container-session-data-folder /tmp/devcontainers-dab610a3-68f0-4faf-87bb-dbe0fc8e64851754387760514 --workspace-folder /home/zsw36318/Work/Epics-Container/ioc-adsimdetector --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector --id-label devcontainer.config_file=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --remove-existing-container --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+  887  echo $EC_REMOTE_USER 
+  888  code ~/.bashrc
+  889  code .
+  890  ~/diamondVPN.sh 
+  891  podman ps -q -a --filter label=devcontainer.local_folder=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector --filter label=devcontainer.config_file=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json
+  892  code . 
+  893  echo $EC_REMOTE_USER 
+  894  code ~/.bashrc
+  895  echo $EC_REMOTE_USER 
+  896  pyenv shell 3.11.13
+  897  echo $EC_REMOTE_USER 
+  898  grep EC_REMOTE -r .
+  899  code 
+  900  ssh zsw36318@pc0132.cs@diamond.ac.uk
+  901  ssh zsw36318@pc0132.cs.diamond.ac.uk
+  902  cd ../t01-services/
+  903  . ./environment.sh
+  904  docker compose up -d
+  905  xhost +SI:localuser:$(id -un)
+  906  docker compose ps -a
+  907  docker compose down
+  908  docker compose ps -a
+  909  docker compose up -d
+  910  docker compose exec example-test-01 caget BL01T-EA-CAM-01:TEST
+  911  docker compose down
+  912  cd .. 
+  913  cd ioc-adsimdetector/
+  914  ./opi/phoebus-launch.sh 
+  915  source $HOME/ec-venv/bin/activate
+  916  pip list
+  917  copier copy https://github.com/epics-containers/ioc-template --trust ioc-lakeshore340
+  918  git add . 
+  919  git status
+  920  git add . 
+  921  cd ioc-lakeshore340/
+  922  git add . 
+  923  git commit -m "initial commit"
+  924  git push -u origin main 
+  925  nano ~/.gitconfig 
+  926  ~/diamondVPN.sh 
+  927  code
+  928  cd Work/Epics-Container/
+  929  cd ioc-adsimdetector/
+  930  ./opi/phoebus-launch.sh 
+  931  env | grep CA
+  932  ./opi/phoebus-launch.sh 
+  933  xhost +SI:localuser:$(id -un)
+  934  ./opi/phoebus-launch.sh 
+  935  cd .. 
+  936  git clone git@github.com:srishtysajeev/ioc-lakeshore340.git
+  937  ls
+  938  code .
+  939  cd ioc-lakeshore340/
+  940  code .
+  941  cd .. 
+  942  rmdir ioc-lakeshore340/
+  943  man rmdir
+  944  man rm
+  945  rmdir --ignore-fail-on-non-empty ioc-lakeshore340/
+  946  ls
+  947  rm -d ioc-lakeshore340/
+  948  man rm
+  949  rm -r ioc-lakeshore340/
+  950  rm -r -d ioc-lakeshore340/
+  951  ls
+  952  source $HOME/ec-venv/bin/activate
+  953  copier copy https://github.com/epics-containers/ioc-template --trust ioc-lakeshore340
+  954  ls
+  955  cd ioc-lakeshore340/
+  956  git add . 
+  957  git commit -m "initial commit"
+  958  git push -u origin main 
+  959  code . 
+  960  ls
+  961  ls -a
+  962  id -u
+  963  sudo -l
+  964  echo hello
+  965  echo $EC-re
+  966  cd Work/
+  967  ls
+  968  cd Epics-Container/
+  969  ls 
+  970  cd .. 
+  971  mv ioc-adsimdetector.code-workspace Epics-Container/
+  972  ls
+  973  cd Epics-Container/
+  974  ls
+  975  cd ioc-lakeshore340/
+  976  ls
+  977  code .
+  978  nano ~/.bashrc
+  979  /usr/share/code/code /home/zsw36318/.vscode/extensions/ms-vscode-remote.remote-containers-0.422.1/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/zsw36318/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --docker-path podman --container-session-data-folder /tmp/devcontainers-dab610a3-68f0-4faf-87bb-dbe0fc8e64851754387760514 --workspace-folder /home/zsw36318/Work/Epics-Container/ioc-adsimdetector --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector --id-label devcontainer.config_file=/home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/zsw36318/Work/Epics-Container/ioc-adsimdetector/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --remove-existing-container --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+  980  ./build
+  981  echo $EC_REMOTE
+  982  cd Work/Epics-Container/ioc-lakeshore340/
+  983  ls
+  984  cd ioc-lakeshore340.code-workspace
+  985  code ioc-lakeshore340.code-workspace
+  986  pyenv shell 3.11.13
+  987  ./build
+  988  cd Work/Epics-Container/
+  989  cd ioc-lakeshore340/
+  990  code ioc-lakeshore340.code-workspace 
+  991  ./build 
+  992  code . 
+  993  source $HOME/ec-venv/bin/activate
+  994  ./build 
+  995  ~/diamondVPN.sh 
+  996  ansible.sh lakeshore340
+  997  source /home/zsw36318/Work/FastCS_uArm2/.venv/bin/activate
+  998  /home/zsw36318/Work/FastCS_uArm2/.venv/bin/python /home/zsw36318/Work/FastCS_uArm2/src/fastcs_uArm/__main__.py
+  999  /home/zsw36318/Work/FastCS_uArm2/.venv/bin/python /home/zsw36318/Work/FastCS_uArm2/src/fastcs_uArm/RobotIOC.py
+ 1000  /home/zsw36318/Work/FastCS_uArm2/.venv/bin/python /home/zsw36318/Work/FastCS_uArm2/src/fastcs_uArm/__main__.py
+ 1001  python -m fastcs_uArm
+ 1002  /home/zsw36318/Work/FastCS_uArm2/.venv/bin/python /home/zsw36318/Work/FastCS_uArm2/src/fastcs_uArm/RobotIOC.py
+ 1003  python -m fastcs_uArm
+ 1004  git status
+ 1005  git branch
+ 1006  git diff
+ 1007  git status
+ 1008  git add . 
+ 1009  git commit -m "Adding generated robot.bob file"
+ 1010  git branch change_how_connects
+ 1011  git checkout change_how_connects 
+ 1012  ls
+ 1013  git status
+ 1014  git diff
+ 1015  git add . 
+ 1016  git checkout main 
+ 1017  git branch 
+ 1018  git checkout change_how_connects 
+ 1019  git commit -m "adding ocmments of what I think I should do"
+ 1020  git checkout main 
+ 1021  git reset
+ 1022  git status
+ 1023  ruff check 
+ 1024  ruff check --fix
+ 1025  git checkout change_how_connects 
+ 1026  git checkout main
+ 1027  git push 
+ 1028  git checkout -b docker
+ 1029  copier update .
+ 1030  docker pull ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1031  podman run ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1032  python fastcs-uArm
+ 1033  fastcs-uArm
+ 1034  podman run command="" ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1035  podman run command='' ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1036  podman run command '' ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1037  podman run --command '' ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1038  podman run --cmd '' ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1039  podman run ghcr.io/srishtysajeev/fastcs-uarm:latest ""
+ 1040  podman run --entrypoint bash ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1041  podman run --entrypoint bash -it ghcr.io/srishtysajeev/fastcs-uarm:latest
+ 1042  podman run --entrypoint bash -it ghcr.io/srishtysajeev/fastcs-uarm:latest -c fastcs-uArm
+ 1043  podman run --entrypoint bash -it --priviledged ghcr.io/srishtysajeev/fastcs-uarm:latest -c fastcs-uArm
+ 1044  podman run --entrypoint bash -it --privileged ghcr.io/srishtysajeev/fastcs-uarm:latest -c fastcs-uArm
+ 1045  podman run --entrypoint bash -it --device /dev/ttyACM0 ghcr.io/srishtysajeev/fastcs-uarm:latest -c fastcs-uArm
+ 1046  history > history_for_print.txt
+ 1047  sudo podman run --entrypoint bash -it --device /dev/ttyACM0 ghcr.io/srishtysajeev/fastcs-uarm:latest -c fastcs-uArm
+ 1048  git status
+ 1049  history > history_for_print.txt
