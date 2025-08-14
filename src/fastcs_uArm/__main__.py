@@ -32,7 +32,7 @@ def main(args: Sequence[str] | None = None) -> None:
     parser.parse_args(args)
 
     gui_options = EpicsGUIOptions(
-        output_path=Path(".") / "robot_new.bob", title="My Robot Controller XYZ"
+        output_path=Path(".") / "robot_new.bob", title="My Robot Controller"
     )
     epics_options = EpicsCAOptions(
         gui=gui_options,
