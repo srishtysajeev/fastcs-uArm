@@ -3,7 +3,7 @@
   <x>0</x>
   <y use_class="true">0</y>
   <width>388</width>
-  <height>105</height>
+  <height>205</height>
   <grid_step_x>4</grid_step_x>
   <grid_step_y>4</grid_step_y>
   <widget type="label" version="2.0.0">
@@ -27,7 +27,7 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>X Pos</text>
+    <text>Base Rot</text>
     <x>23</x>
     <y>30</y>
     <width>150</width>
@@ -36,7 +36,7 @@
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
-    <pv_name>ROBOT:XPos</pv_name>
+    <pv_name>ROBOT:BaseRot</pv_name>
     <x>178</x>
     <y>30</y>
     <width>100</width>
@@ -45,9 +45,120 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
-    <pv_name>ROBOT:XPos_RBV</pv_name>
+    <pv_name>ROBOT:BaseRot_RBV</pv_name>
     <x>283</x>
     <y>30</y>
+    <width>100</width>
+    <height>20</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Grip Rot</text>
+    <x>23</x>
+    <y>55</y>
+    <width>150</width>
+    <height>20</height>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>TextEntry</name>
+    <pv_name>ROBOT:GripRot</pv_name>
+    <x>178</x>
+    <y>55</y>
+    <width>205</width>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Rot 1</text>
+    <x>23</x>
+    <y>80</y>
+    <width>150</width>
+    <height>20</height>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>TextEntry</name>
+    <pv_name>ROBOT:Rot1</pv_name>
+    <x>178</x>
+    <y>80</y>
+    <width>100</width>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>TextUpdate</name>
+    <pv_name>ROBOT:Rot1_RBV</pv_name>
+    <x>283</x>
+    <y>80</y>
+    <width>100</width>
+    <height>20</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Rot 2</text>
+    <x>23</x>
+    <y>105</y>
+    <width>150</width>
+    <height>20</height>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>TextEntry</name>
+    <pv_name>ROBOT:Rot2</pv_name>
+    <x>178</x>
+    <y>105</y>
+    <width>100</width>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>TextUpdate</name>
+    <pv_name>ROBOT:Rot2_RBV</pv_name>
+    <x>283</x>
+    <y>105</y>
+    <width>100</width>
+    <height>20</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>X Pos</text>
+    <x>23</x>
+    <y>130</y>
+    <width>150</width>
+    <height>20</height>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>TextEntry</name>
+    <pv_name>ROBOT:XPos</pv_name>
+    <x>178</x>
+    <y>130</y>
+    <width>100</width>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>TextUpdate</name>
+    <pv_name>ROBOT:XPos_RBV</pv_name>
+    <x>283</x>
+    <y>130</y>
     <width>100</width>
     <height>20</height>
     <font>
@@ -60,7 +171,7 @@
     <name>Label</name>
     <text>Y Pos</text>
     <x>23</x>
-    <y>55</y>
+    <y>155</y>
     <width>150</width>
     <height>20</height>
     <tooltip>$(text)</tooltip>
@@ -69,7 +180,7 @@
     <name>TextEntry</name>
     <pv_name>ROBOT:YPos</pv_name>
     <x>178</x>
-    <y>55</y>
+    <y>155</y>
     <width>100</width>
     <height>20</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -78,7 +189,7 @@
     <name>TextUpdate</name>
     <pv_name>ROBOT:YPos_RBV</pv_name>
     <x>283</x>
-    <y>55</y>
+    <y>155</y>
     <width>100</width>
     <height>20</height>
     <font>
@@ -91,7 +202,7 @@
     <name>Label</name>
     <text>Z Pos</text>
     <x>23</x>
-    <y>80</y>
+    <y>180</y>
     <width>150</width>
     <height>20</height>
     <tooltip>$(text)</tooltip>
@@ -100,7 +211,7 @@
     <name>TextEntry</name>
     <pv_name>ROBOT:ZPos</pv_name>
     <x>178</x>
-    <y>80</y>
+    <y>180</y>
     <width>100</width>
     <height>20</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -109,7 +220,7 @@
     <name>TextUpdate</name>
     <pv_name>ROBOT:ZPos_RBV</pv_name>
     <x>283</x>
-    <y>80</y>
+    <y>180</y>
     <width>100</width>
     <height>20</height>
     <font>
