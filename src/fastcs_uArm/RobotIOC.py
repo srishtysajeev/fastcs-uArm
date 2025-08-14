@@ -14,7 +14,7 @@ from fastcs.attributes import AttrHandlerRW, AttrR, AttrRW, AttrW
 from fastcs.controller import BaseController, Controller
 
 # The below represent fastcs datatypes
-from fastcs.datatypes import String, Waveform
+from fastcs.datatypes import Float, Waveform
 
 # fastcs imports
 
@@ -25,7 +25,8 @@ from uarm.wrapper import SwiftAPI
 
 @dataclass
 class PositionUpdater(AttrHandlerRW):
-    update_period: float | None = 0.2
+    command_name: str
+    update_period: float | None = 1
     _controller: RobotController | None = None
 
     async def initialise(self, controller: BaseController):
@@ -44,21 +45,43 @@ class PositionUpdater(AttrHandlerRW):
         pos = self.controller.connection.get_position()
         # print(pos)
         if isinstance(pos, list):
-            # new_pos = [Float(x) for x in pos]
-            # dpos = np.array([Float(x) for x in pos])
-            dpos = np.array(pos)
-            # print(dpos)
-            await attr.set(value=dpos)
+            if self.command_name == "All":
+                dpos = np.array(pos)
+                # print(dpos)
+                await attr.set(value=dpos)
+            elif self.command_name == "X":
+                xpos = pos[0]
+                # print(xpos)
+                await attr.set(value=xpos)
+            elif self.command_name == "Y":
+                ypos = pos[1]
+                await attr.set(value=ypos)
+            elif self.command_name == "Z":
+                zpos = pos[2]
+                await attr.set(value=zpos)
         else:
             print(f"Update Error: Failed to get position from robot, recieved {pos}")
 
     async def put(self, attr: AttrW, value: Any):
-        self.controller.connection.set_position(x=value[0], y=value[1], z=value[2])
+        if self.command_name == "All":
+            self.controller.connection.set_position(x=value[0], y=value[1], z=value[2])
+        if self.command_name == "X":
+            self.controller.connection.set_position(x=value)
+        if self.command_name == "Y":
+            self.controller.connection.set_position(y=value)
+        if self.command_name == "Z":
+            self.controller.connection.set_position(z=value)
 
 
 class RobotController(Controller):
-    device_id = AttrR(String())
-    pos = AttrRW(Waveform(array_dtype=float, shape=(3,)), handler=PositionUpdater())
+    # device_id = AttrR(String(), handler=PositionUpdater())
+    x_pos = AttrRW(Float(), handler=PositionUpdater("X"))
+    y_pos = AttrRW(Float(), handler=PositionUpdater("Y"))
+    z_pos = AttrRW(Float(), handler=PositionUpdater("Z"))
+    pos = AttrRW(
+        Waveform(array_dtype=float, shape=(3,)), 
+        handler=PositionUpdater("All")
+    )
 
     def __init__(self):
         super().__init__()
