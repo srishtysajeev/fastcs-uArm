@@ -79,8 +79,7 @@ class RobotController(Controller):
     y_pos = AttrRW(Float(), handler=PositionUpdater("Y"))
     z_pos = AttrRW(Float(), handler=PositionUpdater("Z"))
     pos = AttrRW(
-        Waveform(array_dtype=float, shape=(3,)), 
-        handler=PositionUpdater("All")
+        Waveform(array_dtype=float, shape=(3,)), handler=PositionUpdater("All")
     )
 
     def __init__(self):
