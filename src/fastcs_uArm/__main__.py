@@ -21,6 +21,7 @@ __all__ = ["main"]
 
 
 def main(args: Sequence[str] | None = None) -> None:
+    print("Starting the function main !")
     """Argument parser for the CLI."""
     parser = ArgumentParser()
     parser.add_argument(
@@ -47,4 +48,5 @@ def main(args: Sequence[str] | None = None) -> None:
 
 
 if __name__ == "__main__":
+    print("starting IOC MAIN")
     main()
