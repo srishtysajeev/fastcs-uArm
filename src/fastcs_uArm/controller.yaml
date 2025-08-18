@@ -3,13 +3,13 @@ controller:
   ip_settings:
     ip: "localhost"
     port: 25565
-  num_ramp_controllers: 1
+  #num_ramp_controllers: 1
 transport:
   - pva_ioc:
-      pv_prefix: DEMO
+      pv_prefix: ROBOT
     gui:
       output_path: opi/auto-generated/pva_example.bob
   - ca_ioc:
-      pv_prefix: DEMO
+      pv_prefix: ROBOT
     gui:
       output_path: opi/auto-generated/ca_example.bob
