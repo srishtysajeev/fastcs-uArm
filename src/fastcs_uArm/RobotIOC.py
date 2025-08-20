@@ -81,16 +81,18 @@ class RobotController(Controller):
         Waveform(array_dtype=float, shape=(3,)), handler=PositionUpdater("All")
     )
 
-    def __init__(self):
+    def __init__(self, port):
         super().__init__()
         self.description = "A robot controller"
         self.connection = SwiftAPI()
+        # self.connection.disconnect()
+        self.port = port
         # makes connection as soon as initialized
 
     async def connect(
         self,
     ):
-        self.connection.connect(port="/dev/ttyACM0")
+        self.connection.connect(port=self.port)
 
         # self.connection.flush_cmd()
         await asyncio.sleep(1)  # try and get rid of this and fix with disconnect

@@ -28,18 +28,24 @@ def main(args: Sequence[str] | None = None) -> None:
         "--version",
         action="version",
         version=__version__,
+        # add extra arguments
     )
-    parser.parse_args(args)
+    parser.add_argument(
+        "-p",
+        "--port",
+    )
+    arguments = parser.parse_args(args)
+    my_port = arguments.port
+    # print(my_port)
 
     gui_options = EpicsGUIOptions(
         output_path=Path(".") / "robot.bob", title="My Robot Controller XYZ"
     )
     epics_options = EpicsCAOptions(
-        gui=gui_options,
-        ca_ioc=EpicsIOCOptions(pv_prefix="ROBOT"),
+        gui=gui_options, ca_ioc=EpicsIOCOptions(pv_prefix="ROBOT")
     )
     # connection_settings = IPConnectionSettings("localhost", 25565)
-    fastcs = FastCS(RobotController(), [epics_options])
+    fastcs = FastCS(RobotController(port=my_port), [epics_options])
 
     fastcs.create_gui()
 
