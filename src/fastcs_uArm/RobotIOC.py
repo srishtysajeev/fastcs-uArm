@@ -19,7 +19,6 @@ from fastcs.datatypes import Float, Waveform
 # fastcs imports
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
-from uarm.tools.list_ports import get_ports
 from uarm.wrapper import SwiftAPI
 
 
@@ -90,19 +89,8 @@ class RobotController(Controller):
 
     async def connect(
         self,
-    ):  # makes sure that only one connection is made
-        ports = get_ports(
-            filters={"hwid": "USB VID:PID=2341:0042"}
-        )  # get rid of this so that the user specifies ports
-        print("Ports: ", ports)
-        if not ports:
-            raise ConnectionError("The device is not connected")
-
-        self.connection.connect(
-            port=ports[0]["device"]
-        )  # takes the first port available
-        # causes issues if you have two of the same device
-        # maybe make this a for loop instead
+    ):
+        self.connection.connect(port="/dev/ttyACM0")
 
         # self.connection.flush_cmd()
         await asyncio.sleep(1)  # try and get rid of this and fix with disconnect
