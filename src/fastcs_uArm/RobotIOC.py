@@ -14,7 +14,7 @@ from fastcs.attributes import AttrHandlerRW, AttrR, AttrRW, AttrW
 from fastcs.controller import BaseController, Controller
 
 # The below represent fastcs datatypes
-from fastcs.datatypes import Float, Waveform
+from fastcs.datatypes import Bool, Float, Waveform
 
 # fastcs imports
 
@@ -96,6 +96,8 @@ class RobotController(Controller):
     rot1 = AttrRW(Float(), handler=PositionUpdater(1))
     rot2 = AttrRW(Float(), handler=PositionUpdater(2))
     grip_rot = AttrW(Float(), handler=PositionUpdater(3))
+    speed_factor = AttrW(Float(), handler=PositionUpdater("S"))
+    reset_pos = AttrW(Bool(), handler=PositionUpdater("R"))
 
     pos = AttrRW(
         Waveform(array_dtype=float, shape=(3,)), handler=PositionUpdater("All")
