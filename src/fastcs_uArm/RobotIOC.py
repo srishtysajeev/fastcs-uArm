@@ -25,8 +25,8 @@ from uarm.wrapper import SwiftAPI
 
 @dataclass
 class PositionUpdater(AttrHandlerRW):
-    command_name: str
-    update_period: float | None = 1
+    command_name: str | int
+    update_period: float | None = 0.5
     _controller: RobotController | None = None
 
     async def initialise(self, controller: BaseController):
@@ -43,6 +43,7 @@ class PositionUpdater(AttrHandlerRW):
     async def update(self, attr: AttrR):
         # self.controller.connection.flush_cmd()
         pos = self.controller.connection.get_position()
+
         # print(pos)
         if isinstance(pos, list):
             if self.command_name == "All":
@@ -59,6 +60,13 @@ class PositionUpdater(AttrHandlerRW):
             elif self.command_name == "Z":
                 zpos = pos[2]
                 await attr.set(value=zpos)
+            elif isinstance(self.command_name, int):
+                # rot_num = int(self.command_name)
+                angle = self.controller.connection.get_servo_angle(
+                    servo_id=self.command_name
+                )
+                await attr.set(value=angle)
+
         else:
             print(f"Update Error: Failed to get position from robot, recieved {pos}")
 
@@ -71,6 +79,12 @@ class PositionUpdater(AttrHandlerRW):
             self.controller.connection.set_position(y=value)
         if self.command_name == "Z":
             self.controller.connection.set_position(z=value)
+        if isinstance(self.command_name, int):
+            # the rotation commands must be the correct number!!
+            # rot_num = int(self.command_name)
+            self.controller.connection.set_servo_angle(
+                servo_id=self.command_name, angle=value
+            )
 
 
 class RobotController(Controller):
@@ -78,6 +92,11 @@ class RobotController(Controller):
     x_pos = AttrRW(Float(), handler=PositionUpdater("X"))
     y_pos = AttrRW(Float(), handler=PositionUpdater("Y"))
     z_pos = AttrRW(Float(), handler=PositionUpdater("Z"))
+    base_rot = AttrRW(Float(), handler=PositionUpdater(0))
+    rot1 = AttrRW(Float(), handler=PositionUpdater(1))
+    rot2 = AttrRW(Float(), handler=PositionUpdater(2))
+    grip_rot = AttrW(Float(), handler=PositionUpdater(3))
+
     pos = AttrRW(
         Waveform(array_dtype=float, shape=(3,)), handler=PositionUpdater("All")
     )
