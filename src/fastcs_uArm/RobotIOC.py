@@ -85,6 +85,10 @@ class PositionUpdater(AttrHandlerRW):
             self.controller.connection.set_servo_angle(
                 servo_id=self.command_name, angle=value
             )
+        if self.command_name == "R":
+            self.controller.connection.reset()
+        if self.command_name == "S":
+            self.controller.connection.set_speed_factor(value)
 
 
 class RobotController(Controller):
