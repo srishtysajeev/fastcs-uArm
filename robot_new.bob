@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>My Robot Controller XYZ</name>
-  <x>0</x>
-  <y use_class="true">0</y>
   <width>388</width>
   <height>255</height>
   <grid_step_x>4</grid_step_x>
@@ -9,7 +8,7 @@
   <widget type="label" version="2.0.0">
     <name>Title</name>
     <class>TITLE</class>
-    <text>My Robot Controller XYZ</text>
+    <text>My Robot Controller</text>
     <x use_class="true">0</x>
     <y use_class="true">0</y>
     <width>388</width>
@@ -27,29 +26,24 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Base Rot</text>
+    <text>Base Rotation</text>
     <x>23</x>
-    <y>30</y>
+    <y>108</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:BaseRot</pv_name>
     <x>178</x>
-    <y>30</y>
-    <width>100</width>
-    <height>20</height>
+    <y>108</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
     <pv_name>ROBOT:BaseRot_RBV</pv_name>
     <x>283</x>
-    <y>30</y>
-    <width>100</width>
-    <height>20</height>
+    <y>108</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -58,64 +52,70 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Grip Rot</text>
+    <text>Grip Rotation</text>
     <x>23</x>
-    <y>55</y>
+    <y>75</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:GripRot</pv_name>
     <x>178</x>
-    <y>55</y>
+    <y>75</y>
     <width>205</width>
-    <height>20</height>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Reset Pos</text>
-    <x>23</x>
-    <y>80</y>
+    <class>SECTION</class>
+    <text>Reset Position</text>
+    <x>444</x>
+    <y>75</y>
     <width>150</width>
-    <height>20</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="choice" version="2.0.0">
     <name>ToggleButton</name>
     <pv_name>ROBOT:ResetPos</pv_name>
-    <x>178</x>
-    <y>80</y>
+    <x>599</x>
+    <y>75</y>
     <width>205</width>
     <height>20</height>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Rot 1</text>
+    <text>Rotation (lower hinge)</text>
     <x>23</x>
-    <y>105</y>
+    <y>140</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:Rot1</pv_name>
     <x>178</x>
-    <y>105</y>
-    <width>100</width>
-    <height>20</height>
+    <y>140</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
     <pv_name>ROBOT:Rot1_RBV</pv_name>
     <x>283</x>
-    <y>105</y>
-    <width>100</width>
-    <height>20</height>
+    <y>140</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -124,29 +124,24 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Rot 2</text>
+    <text>Rotation (higher hinge)</text>
     <x>23</x>
-    <y>130</y>
+    <y>168</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:Rot2</pv_name>
     <x>178</x>
-    <y>130</y>
-    <width>100</width>
-    <height>20</height>
+    <y>168</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
     <pv_name>ROBOT:Rot2_RBV</pv_name>
     <x>283</x>
-    <y>130</y>
-    <width>100</width>
-    <height>20</height>
+    <y>168</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -155,47 +150,50 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
+    <class>SECTION</class>
     <text>Speed Factor</text>
-    <x>23</x>
-    <y>155</y>
+    <x>444</x>
+    <y>40</y>
     <width>150</width>
-    <height>20</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:SpeedFactor</pv_name>
-    <x>178</x>
-    <y>155</y>
+    <x>599</x>
+    <y>40</y>
     <width>205</width>
-    <height>20</height>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>X Pos</text>
+    <text>X Position</text>
     <x>23</x>
-    <y>180</y>
+    <y>244</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:XPos</pv_name>
     <x>178</x>
-    <y>180</y>
-    <width>100</width>
-    <height>20</height>
+    <y>244</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
     <pv_name>ROBOT:XPos_RBV</pv_name>
     <x>283</x>
-    <y>180</y>
-    <width>100</width>
-    <height>20</height>
+    <y>244</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -204,29 +202,24 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Y Pos</text>
+    <text>Y Position</text>
     <x>23</x>
-    <y>205</y>
+    <y>272</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:YPos</pv_name>
     <x>178</x>
-    <y>205</y>
-    <width>100</width>
-    <height>20</height>
+    <y>272</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
     <pv_name>ROBOT:YPos_RBV</pv_name>
     <x>283</x>
-    <y>205</y>
-    <width>100</width>
-    <height>20</height>
+    <y>272</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -235,33 +228,64 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
-    <text>Z Pos</text>
+    <text>Z Position</text>
     <x>23</x>
-    <y>230</y>
+    <y>305</y>
     <width>150</width>
-    <height>20</height>
     <tooltip>$(text)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>TextEntry</name>
     <pv_name>ROBOT:ZPos</pv_name>
     <x>178</x>
-    <y>230</y>
-    <width>100</width>
-    <height>20</height>
+    <y>305</y>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>TextUpdate</name>
     <pv_name>ROBOT:ZPos_RBV</pv_name>
     <x>283</x>
-    <y>230</y>
-    <width>100</width>
-    <height>20</height>
+    <y>305</y>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
     </font>
     <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <class>SECTION</class>
+    <text>Cartesian Coordinates</text>
+    <x>23</x>
+    <y>212</y>
+    <width>155</width>
+    <height>30</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <class>SECTION</class>
+    <text>Rotations</text>
+    <x>23</x>
+    <y>40</y>
+    <width>141</width>
+    <height>15</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
   </widget>
 </display>
