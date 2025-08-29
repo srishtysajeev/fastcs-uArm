@@ -35,7 +35,7 @@ def main(args: Sequence[str] | None = None) -> None:
         # output_path=Path("/epics/opi") / "robot.bob",
         # title="My Robot Controller XYZ",
         output_path=Path(".") / "robot_new.bob",
-        title="My Robot Controller XYZ",
+        title="My Robot Controller",
     )
     epics_options = EpicsCAOptions(
         gui=gui_options,
