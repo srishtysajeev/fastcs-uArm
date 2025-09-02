@@ -16,7 +16,17 @@ from fastcs.controller import BaseController, Controller
 # The below represent fastcs datatypes
 from fastcs.datatypes import Bool, Float, Waveform
 
-# fastcs imports
+# fastcs imports + monkey patch for kubernetes 
+# the moneky patch is so that log files aren't make in root
+# but /tmp instead 
+original_expanduser = os.path.expanduser
+
+def safe_expanduser(path):
+    if path == '~':
+        return '/tmp'  # or any other writable path
+    return original_expanduser(path)
+
+os.path.expanduser = safe_expanduser
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 from uarm.tools.list_ports import get_ports
